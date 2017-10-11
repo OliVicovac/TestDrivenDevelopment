@@ -74,7 +74,7 @@ class Bruch(object):
     def __radd__(self, other):
         if isinstance(other, int):
             return self.calc() + other
-        
+
     def __truediv__(self, other):
         if isinstance(other, Bruch):
             return self.calc() / other.calc()
@@ -83,3 +83,7 @@ class Bruch(object):
         else:
             raise TypeError("Falscher type")
 
+    def __rtruediv__(self, other):
+        if isinstance(other, int):
+            return self.calc() / other
+        raise TypeError("Falscher type")
