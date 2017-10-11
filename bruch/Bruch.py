@@ -8,6 +8,7 @@ Created on 18.09.2017
 """
 
 class Bruch(object):
+
     """
     Konstruktor
     :type zaehler: Zaehler des Bruchs
@@ -37,7 +38,6 @@ class Bruch(object):
         elif isinstance(zaehler, int) and not isinstance(nenner, float):
             self.zaehler = zaehler
             self.nenner = 1
-
         else:
             raise TypeError("Zaehler und/oder Nenner nicht zulaessig!")
 
@@ -50,8 +50,13 @@ class Bruch(object):
 
 
     def __add__(self, other):
-        print("__add__ was called")
-        pass
+        if isinstance(other, Bruch):
+            return self.calc() + other.calc()
+        elif isinstance(other, int):
+            return self.calc() + other
+        else:
+            raise TypeError("Falscher type")
+
 
     def __float__(self):
         print("__float__ was called")
