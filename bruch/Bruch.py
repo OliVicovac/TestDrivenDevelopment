@@ -40,3 +40,15 @@ class Bruch(object):
 
         else:
             raise TypeError("Zaehler und/oder Nenner nicht zulaessig!")
+
+    """
+    Ergänzung durch ovicovac
+    """
+
+    def __add__(self, other):
+        print("__add__ was called")
+        pass
+
+    def __float__(self):
+        print("__float__ was called")
+        pass
