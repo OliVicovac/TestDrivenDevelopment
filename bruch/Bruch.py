@@ -45,6 +45,10 @@ class Bruch(object):
     Ergänzung durch ovicovac
     """
 
+    def calc(self):
+        return self.zaehler / self.nenner
+
+
     def __add__(self, other):
         print("__add__ was called")
         pass
