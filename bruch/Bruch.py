@@ -70,3 +70,7 @@ class Bruch(object):
 
     def __eq__(self, other):
         return self.calc() == other
+
+    def __radd__(self, other):
+        if isinstance(other, int):
+            return self.calc() + other
