@@ -48,7 +48,6 @@ class Bruch(object):
     def calc(self):
         return self.zaehler / self.nenner
 
-
     def __add__(self, other):
         if isinstance(other, Bruch):
             return self.calc() + other.calc()
@@ -57,7 +56,17 @@ class Bruch(object):
         else:
             raise TypeError("Falscher type")
 
-
     def __float__(self):
         print("__float__ was called")
         pass
+
+    def __iadd__(self, other):
+        if isinstance(other, Bruch):
+            return self.calc() + other.calc()
+        elif isinstance(other, int):
+            return self.calc() + other
+        else:
+            raise TypeError("Falscher type")
+
+    def __eq__(self, other):
+        return self.calc() == other
