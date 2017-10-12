@@ -158,6 +158,9 @@ class Bruch(object):
 
     def __neg__(self):
         return Bruch(-self.zaehler, self.nenner)
+    
+    def __int__(self):
+        return int(self.calc())
 
 
 
