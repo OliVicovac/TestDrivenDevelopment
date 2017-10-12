@@ -101,8 +101,10 @@ class Bruch(object):
             return self.calc() * other
 
     def __imul__(self, other):
-       if isinstance(other, not Bruch):
-            raise TypeError("Falscher type")
+       if isinstance(other, int):
+           return self.calc() * other
+       else:
+           raise TypeError("Falscher typ")
 
     def __sub__(self, other):
         if isinstance(other, Bruch):
@@ -111,5 +113,9 @@ class Bruch(object):
             return self.calc() - other
         else:
             raise TypeError("Falscher type")
+
+    def __rsub__(self, other):
+        if isinstance(other, int):
+            return self.calc() - other
 
 

@@ -38,6 +38,7 @@ class TestMultiplikation(unittest.TestCase):
         self.b *= 2
         assert(self.b == 3)
 
+
     def testiMul2(self):
         self.b *= Bruch(2)
         assert(self.b == 3)
