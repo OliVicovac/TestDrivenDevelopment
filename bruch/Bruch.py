@@ -63,10 +63,10 @@ class Bruch(object):
     def __iadd__(self, other):
         if isinstance(other, Bruch):
             return self.calc() + other.calc()
-        elif isinstance(other, int):
+        if isinstance(other, int):
             return self.calc() + other
-        else:
-            raise TypeError("Falscher type")
+
+        raise TypeError("Falscher type")
 
     def __eq__(self, other):
         return self.calc() == other
@@ -84,9 +84,22 @@ class Bruch(object):
             raise TypeError("Falscher type")
 
     def __rtruediv__(self, other):
+        if self.zaehler == 0:
+            raise ZeroDivisionError
         if isinstance(other, int):
             return self.calc() / other
-        raise TypeError("Falscher type")
+        else:
+            raise TypeError("Falscher typ")
+
+
+    def __itruediv__(self, other):
+        if isinstance(other, Bruch):
+            return self.calc() / other.calc()
+        elif isinstance(other, int):
+            return self.calc() / other
+        else:
+            raise TypeError("Falscher Typ")
+
 
     def __mul__(self, other):
         if isinstance(other, Bruch):

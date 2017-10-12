@@ -50,7 +50,7 @@ class TestDivision(unittest.TestCase):
     def testrdivZeroError(self):
         bneu = Bruch(0, 3)
         self.assertRaises(ZeroDivisionError, bneu.__rtruediv__, 3)
-        
+
     def testiDiv(self):
         self.b /= 2
         assert(self.b == Bruch(3, 4))
