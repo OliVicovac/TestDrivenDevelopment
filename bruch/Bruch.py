@@ -132,6 +132,7 @@ class Bruch(object):
     def __rsub__(self, other):
         if isinstance(other, int):
             return  other - self.calc()
+        raise TypeError("Falscher type")
 
     def __isub__(self, other):
         if isinstance(other, Bruch):
