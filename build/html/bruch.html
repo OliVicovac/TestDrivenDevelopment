@@ -1,0 +1,320 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bruch &#8212; Testing 1 Dokumentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="prev" title="Welcome to Testing’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Bruch">
+<span id="bruch"></span><h1>Bruch<a class="headerlink" href="#module-Bruch" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Created on 18.09.2017</p>
+<p>&#64;author: Michael Borko &lt;<a class="reference external" href="mailto:mborko&#37;&#52;&#48;tgm&#46;ac&#46;at">mborko<span>&#64;</span>tgm<span>&#46;</span>ac<span>&#46;</span>at</a>&gt;
+&#64;version: 20170918</p>
+<p>&#64;description: Implementierung einiger Operationen, um das Rechnen mit Bruechen zu ermoeglichen</p>
+<dl class="class">
+<dt id="Bruch.Bruch">
+<em class="property">class </em><code class="descclassname">Bruch.</code><code class="descname">Bruch</code><span class="sig-paren">(</span><em>zaehler=None</em>, <em>nenner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Konstruktor
+:type zaehler: Zaehler des Bruchs
+:type nenner: Nenner des Bruchs</p>
+<dl class="method">
+<dt id="Bruch.Bruch.__abs__">
+<code class="descname">__abs__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__abs__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Rechnet den Betrag
+:return: Betrag von self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__add__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Addiert other und self
+:raise TypeError: Bei nicht int oder Bruch
+:param other: Objekt das addiert wird
+:return: addierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__eq__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dient zum Vergleich und gibt Boolean zurück
+:param other:Objekt, dass verglichen wird
+:return:Wenn beide Objekte gleich sind: True, wenn nicht: False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__float__">
+<code class="descname">__float__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__float__" title="Link zu dieser Definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">ausgerechneter float wird zurückgegeben</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__ge__">
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__ge__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>vergleicht mit &gt;=
+:param other: Objekt mit dem self verglichen wird
+:return: True wenn größer gleich als other, wenn nicht: False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__gt__">
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__gt__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>vergleicht mit &gt;
+:param other: Objekt mit dem self verglichen wird
+:return: True wenn grö?er als other, wenn nicht: False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__iadd__">
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__iadd__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Addiert other und self
+:param other: Objekt das addiert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: addierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__imul__">
+<code class="descname">__imul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__imul__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>wird bei <a href="#id1"><span class="problematic" id="id2">*</span></a>= aufgerufen
+:param other: Objekt das multipliziert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: multiplizierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>zaehler=None</em>, <em>nenner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__init__" title="Link zu dieser Definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__int__">
+<code class="descname">__int__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__int__" title="Link zu dieser Definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">einen int Wert</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__isub__">
+<code class="descname">__isub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__isub__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>wird bei -= aufgerufen
+:param other: Objekt das subtrahiert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: subtrahierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__itruediv__">
+<code class="descname">__itruediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__itruediv__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+:param other: Objekt das dividiert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: dividierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__mul__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Multipliziert other und self
+:param other: Objekt das multipliziert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: multiplizierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__neg__">
+<code class="descname">__neg__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__neg__" title="Link zu dieser Definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">negativen Bruch</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__radd__">
+<code class="descname">__radd__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__radd__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+:param other: addiertes Objekt
+:return: addierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__rmul__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+:param other: Objekt das multipliziert wird
+:return: multiplizierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__rsub__">
+<code class="descname">__rsub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__rsub__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+:param other: subtrahiertes Objekt
+:raise TypeError: Bei nicht int
+:return: subtrahierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__rtruediv__">
+<code class="descname">__rtruediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__rtruediv__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+:param other: Objekt das dividiert wird
+:raise TypeError: Bei nicht int
+:raise ZeroDivisionError: wenn der zaehler 0 ist
+:return: dividierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__str__" title="Link zu dieser Definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Bruch als String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__sub__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Subtrahiert other und self
+:param other: Objekt das subtrahiert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: subtrahierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.__truediv__">
+<code class="descname">__truediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.__truediv__" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Dividiert other und self
+:param other: Objekt das dividiert wird
+:raise TypeError: Bei nicht int oder Bruch
+:return: dividierter Bruch als float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Bruch.Bruch.calc">
+<code class="descname">calc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bruch.Bruch.calc" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Rechnet absouluten Wert des Bruchs aus</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Testing</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bruch</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="vorheriges Kapitel">Welcome to Testing’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Vicovac Oliver.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/bruch.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

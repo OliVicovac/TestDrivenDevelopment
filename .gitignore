@@ -59,7 +59,9 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+build/doctrees/
+build/html/_sources/
+build/html/_static/
 develop-eggs/
 dist/
 downloads/
