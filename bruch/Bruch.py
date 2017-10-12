@@ -99,4 +99,8 @@ class Bruch(object):
     def __rmul__(self, other):
         if isinstance(other, int):
             return self.calc() * other
-        
+
+    def __imul__(self, other):
+        if isinstance(other, not int):
+            raise TypeError("Falscher type")
+
