@@ -156,6 +156,8 @@ class Bruch(object):
     def __float__(self):
         return self.calc()
 
+    def __neg__(self):
+        return Bruch(-self.zaehler, self.nenner)
 
 
 
