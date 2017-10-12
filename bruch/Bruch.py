@@ -145,6 +145,10 @@ class Bruch(object):
     def __str__(self):
         return '({}/{})'.format(abs(self.zaehler), abs(self.nenner))
 
+    def __ge__(self, other):
+        return self.calc() >= other.calc()
+
+
 
 
 
