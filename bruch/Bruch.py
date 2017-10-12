@@ -131,7 +131,7 @@ class Bruch(object):
 
     def __rsub__(self, other):
         if isinstance(other, int):
-            return self.calc() - other
+            return  other - self.calc()
 
 
 
