@@ -147,9 +147,14 @@ class Bruch(object):
 
     def __ge__(self, other):
         return self.calc() >= other.calc()
+
     def __gt__(self, other):
         return self.calc() > other.calc()
 
+    def __abs__(self):
+        return abs(self.calc())
+    def __float__(self):
+        return self.calc()
 
 
 
