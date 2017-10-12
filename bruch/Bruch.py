@@ -133,6 +133,14 @@ class Bruch(object):
         if isinstance(other, int):
             return  other - self.calc()
 
+    def __isub__(self, other):
+        if isinstance(other, Bruch):
+            return self.calc() - other.calc()
+        elif isinstance(other, int):
+            return self.calc() - other
+        else:
+            raise TypeError("Falscher type")
+
 
 
 
