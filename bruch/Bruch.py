@@ -142,6 +142,10 @@ class Bruch(object):
         else:
             raise TypeError("Falscher type")
 
+    def __str__(self):
+        return '({}/{})'.format(abs(self.zaehler), abs(self.nenner))
+
+
 
 
 
