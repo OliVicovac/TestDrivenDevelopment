@@ -46,9 +46,22 @@ class Bruch(object):
     """
 
     def calc(self):
+        """
+
+        Rechnet absouluten Wert des Bruchs aus
+
+        """
         return self.zaehler / self.nenner
 
     def __add__(self, other):
+        """
+
+        Addiert other und self
+        :raise TypeError: Bei nicht int oder Bruch
+        :param other: Objekt das addiert wird
+        :return: addierter Bruch als float
+
+        """
         if isinstance(other, Bruch):
             return self.calc() + other.calc()
         elif isinstance(other, int):
@@ -61,6 +74,14 @@ class Bruch(object):
         pass
 
     def __iadd__(self, other):
+        """
+
+        Addiert other und self
+        :param other: Objekt das addiert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: addierter Bruch als float
+
+        """
         if isinstance(other, Bruch):
             return self.calc() + other.calc()
         if isinstance(other, int):
@@ -69,13 +90,35 @@ class Bruch(object):
         raise TypeError("Falscher type")
 
     def __eq__(self, other):
+        """
+
+        Dient zum Vergleich und gibt Boolean zurück
+        :param other:Objekt, dass verglichen wird
+        :return:Wenn beide Objekte gleich sind: True, wenn nicht: False
+
+        """
         return self.calc() == other
 
     def __radd__(self, other):
+        """
+
+        Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+        :param other: addiertes Objekt
+        :return: addierter Bruch als float
+
+        """
         if isinstance(other, int):
             return self.calc() + other
 
     def __truediv__(self, other):
+        """
+
+        Dividiert other und self
+        :param other: Objekt das dividiert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: dividierter Bruch als float
+
+        """
         if isinstance(other, Bruch):
             return self.calc() / other.calc()
         elif isinstance(other, int):
@@ -84,6 +127,15 @@ class Bruch(object):
             raise TypeError("Falscher type")
 
     def __rtruediv__(self, other):
+        """
+
+        Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+        :param other: Objekt das dividiert wird
+        :raise TypeError: Bei nicht int
+        :raise ZeroDivisionError: wenn der zaehler 0 ist
+        :return: dividierter Bruch als float
+
+        """
         if self.zaehler == 0:
             raise ZeroDivisionError
         if isinstance(other, int):
@@ -93,6 +145,14 @@ class Bruch(object):
 
 
     def __itruediv__(self, other):
+        """
+
+        Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+        :param other: Objekt das dividiert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: dividierter Bruch als float
+
+        """
         if isinstance(other, Bruch):
             return self.calc() / other.calc()
         elif isinstance(other, int):
@@ -102,6 +162,14 @@ class Bruch(object):
 
 
     def __mul__(self, other):
+        """
+
+        Multipliziert other und self
+        :param other: Objekt das multipliziert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: multiplizierter Bruch als float
+
+        """
         if isinstance(other, Bruch):
             return self.calc() * other.calc()
         elif isinstance(other, int):
@@ -110,18 +178,42 @@ class Bruch(object):
             raise TypeError("Falscher type")
 
     def __rmul__(self, other):
+        """
+
+        Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+        :param other: Objekt das multipliziert wird
+        :return: multiplizierter Bruch als float
+
+        """
         if isinstance(other, int):
             return self.calc() * other
 
     def __imul__(self, other):
-       if isinstance(other, int):
-           return self.calc() * other
-       elif isinstance(other, Bruch):
-           return self.calc() * other.calc()
-       else:
-           raise TypeError("Falscher typ")
+        """
+
+        wird bei *= aufgerufen
+        :param other: Objekt das multipliziert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: multiplizierter Bruch als float
+
+        """
+        if isinstance(other, int):
+            return self.calc() * other
+        elif isinstance(other, Bruch):
+            return self.calc() * other.calc()
+        else:
+            raise TypeError("Falscher typ")
 
     def __sub__(self, other):
+        """
+
+        Subtrahiert other und self
+        :param other: Objekt das subtrahiert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: subtrahierter Bruch als float
+
+        """
+
         if isinstance(other, Bruch):
             return self.calc() - other.calc()
         elif isinstance(other, int):
@@ -130,11 +222,29 @@ class Bruch(object):
             raise TypeError("Falscher type")
 
     def __rsub__(self, other):
+        """
+
+        Wenn other auf der linken Seite des Operators steht, wird diese Methode ausgeführt
+        :param other: subtrahiertes Objekt
+        :raise TypeError: Bei nicht int
+        :return: subtrahierter Bruch als float
+
+        """
+
         if isinstance(other, int):
             return  other - self.calc()
         raise TypeError("Falscher type")
 
     def __isub__(self, other):
+        """
+
+        wird bei -= aufgerufen
+        :param other: Objekt das subtrahiert wird
+        :raise TypeError: Bei nicht int oder Bruch
+        :return: subtrahierter Bruch als float
+
+        """
+
         if isinstance(other, Bruch):
             return self.calc() - other.calc()
         elif isinstance(other, int):
@@ -143,23 +253,61 @@ class Bruch(object):
             raise TypeError("Falscher type")
 
     def __str__(self):
+        """
+
+        :return: Bruch als String
+
+        """
         return '({}/{})'.format(abs(self.zaehler), abs(self.nenner))
 
     def __ge__(self, other):
+        """
+        vergleicht mit >=
+        :param other: Objekt mit dem self verglichen wird
+        :return: True wenn größer gleich als other, wenn nicht: False
+
+        """
         return self.calc() >= other.calc()
 
     def __gt__(self, other):
+        """
+        vergleicht mit >
+        :param other: Objekt mit dem self verglichen wird
+        :return: True wenn grö?er als other, wenn nicht: False
+
+        """
         return self.calc() > other.calc()
 
     def __abs__(self):
+        """
+        Rechnet den Betrag
+        :return: Betrag von self
+
+        """
         return abs(self.calc())
+
     def __float__(self):
+        """
+
+        :return: ausgerechneter float wird zurückgegeben
+
+        """
         return self.calc()
 
     def __neg__(self):
+        """
+
+        :return: negativen Bruch
+
+        """
         return Bruch(-self.zaehler, self.nenner)
-    
+
     def __int__(self):
+        """
+
+        :return: einen int Wert
+
+        """
         return int(self.calc())
 
 
